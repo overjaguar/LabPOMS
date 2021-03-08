@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ</title>
+  <meta name="description" content="Доклад">
+
+  <meta property="og:title" content="СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ">
+  <meta property="og:description" content="Доклад">
+
+
+
+  <link rel="shortcut icon" href="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/icon.PNG" type="image/x-icon">
+  <!-- Assets -->
+  <link rel="stylesheet" href="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/grid-3.0.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/blocks-2.12.css" type="text/css" media="all">
+  <link rel="stylesheet" href="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/animation-1.0.min.css" type="text/css" media="all">
+  <script type="text/javascript" async="" id="statscript" src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/simplestat-0.1.min.js.Без названия"></script>
+  <script src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/jquery-1.10.2.min.js.Без названия"></script>
+  <script src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/scripts-2.8.min.js.Без названия"></script>
+  <script src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/blocks-2.7.js.Без названия"></script>
+  <script src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/lazyload-1.3.min.js.Без названия" charset="utf-8"></script>
+  <script src="./СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ_files/animation-1.0.min.js.Без названия" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+  </script>
+  <script type="text/javascript">
+    if ((/bot|google|yandex|baidu|bing|msn|duckduckbot|teoma|slurp|crawler|spider|robot|crawling|facebook/i.test(navigator.userAgent)) === false && typeof(sessionStorage) != 'undefined' && sessionStorage.getItem('visited') !== 'y') {
+      var style = document.createElement('style');
+      style.type = 'text/css';
+      style.innerHTML = '@media screen and (min-width: 980px) {.t-records {opacity: 0;}.t-records_animated {-webkit-transition: opacity ease-in-out .2s;-moz-transition: opacity ease-in-out .2s;-o-transition: opacity ease-in-out .2s;transition: opacity ease-in-out .2s;}.t-records.t-records_visible {opacity: 1;}}';
+      document.getElementsByTagName('head')[0].appendChild(style);
+      $(document).ready(function() {
+        $('.t-records').addClass('t-records_animated');
+        setTimeout(function() {
+          $('.t-records').addClass('t-records_visible');
+          sessionStorage.setItem('visited', 'y');
+        }, 400);
+      });
+    }
+  </script>
+</head>
+
+<body class="t-body" style="margin: 0px;">
+  <!--allrecords-->
+  <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-project-id="3782219" data-page-id="17851135" data-page-alias="report" data-formskey="d93eec1f63b6591746edf29e93c1f0d0" data-lazy="yes">
+    <div id="rec288816558" class="r t-rec t-rec_pt_90 t-rec_pb_90" style="padding-top:90px;padding-bottom:90px;background-color:#1f5bff; " data-record-type="468" data-bg-color="#1f5bff" data-animationappear="off">
+      <!-- t468 -->
+      <div class="t468">
+        <div class="t-container t-align_center">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div class="t468__title t-title t-title_lg t-margin_auto" field="title" style=""><strong>СОЗДАНИЕ КАРТОГРАФИЧЕСКОГО ПРИЛОЖЕНИЯ</strong></div>
+            <div class="t468__descr t-descr t-descr_xl t-margin_auto" field="descr" style="">Использование навигационных возможностей Android. Создание геолокационного приложения с поддержкой функций определения местоположения пользователя на карте, определения скорости и направления движения пользователя, масштабирования карты.
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816559" class="r t-rec t-rec_pt_30 t-rec_pb_0 r_showed r_anim" style="padding-top:30px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В настоящее время все больше и больше приложений для Android используют технологии определения местоположения и картографии. Эти функции, практически, становятся обязательными для ваших приложений для Android. Например, с отображением информации о заправочных станциях и дальнейшим предложением маршрута до ближайшей из них, пользователю гораздо проще найти нужное, если это представлено на карте. К счастью, с использованием прикладных программных интерфейсов Google Maps Android API и Android Studio мы можем с легкостью создать функцию представления карт и затем встроить ее в наше приложение.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816560" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Создание ключа прикладного интерфейса Google Maps Android — API Key</strong><strong> </strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Во-первых, для использования комплекта Google Maps Android API SDK требуется ключ прикладного интерфейса или ключ API. Этот ключ можно получить бесплатно на Google Developer Console. Ключ API – это уникальный идентификатор, который используется для аутентификации запросов, связанных с вашим проектом. Он нужен для учета использования API и оплаты. С вашим проектом должен быть связан хотя бы один ключ API.
+              <br><strong> </strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чтобы создать ключ API, выполните следующие действия.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Перейдите на страницу <strong>API и сервисы</strong> &gt; <strong>Учетные данные </strong>(<a href="https://console.cloud.google.com/projectselector2/projectselector/apis/credentials?hl=ru&amp;pli=1&amp;supportedpurview=project&amp;folder=true&amp;organizationId=true" style="color: rgb(31, 91, 255);">https://console.cloud.google.com/projectselector2/projectselector/apis/credentials?hl=ru&amp;pli=1&amp;supportedpurview=project&amp;folder=true&amp;organizationId=true</a>)
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. На странице <strong>Учетные данные</strong> нажмите <strong>Создать учетные данные</strong> &gt; <strong>Ключ API</strong>. Появится диалоговое окно с <strong>созданным ключом API</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Нажмите Закрыть. Новый ключ API можно будет найти в разделе <strong>Ключи API</strong> на странице <strong>Учетные данные</strong>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288818858" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Создание приложения с функцией карты с помощью Android Studio</strong><strong> </strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чтобы создать новый проект Android, выполните следующие действия:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Установите последнюю версию&nbsp;<a href="https://developer.android.com/studio/" style="color: rgb(31, 91, 255);">Android Studio</a>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. В окне «<strong>Добро пожаловать в Android Studio»</strong>&nbsp;нажмите «&nbsp;<strong>Создать новый проект»</strong>. Если у вас уже открыт проект, выберите «<strong>Файл» &gt; «Создать» &gt; «Новый проект»</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. В окне «<strong>Выбор шаблона проекта»</strong>&nbsp;выберите «<strong>Пустое действие»</strong>&nbsp;и нажмите «<strong>Далее»</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. В окне&nbsp;<strong>Настроить проект</strong>&nbsp;выполните следующие действия:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Введите «Мое первое приложение» в&nbsp;поле «<strong>Имя»</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Введите «com.example.myfirstapp» в&nbsp;поле «<strong>Имя пакета»</strong>&nbsp;.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Если вы хотите поместить проект в другую папку, измените его&nbsp;местоположение для&nbsp;<strong>сохранения</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• В&nbsp;раскрывающемся меню&nbsp;«<strong>Язык»</strong>&nbsp;выберите&nbsp;<strong>Java</strong>&nbsp;или&nbsp;<strong>Kotlin</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Выберите самую низкую версию Android, которую будет поддерживать ваше приложение, в поле&nbsp;<strong>Minimum SDK</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Если вашему приложению потребуется поддержка устаревших библиотек, установите&nbsp;флажок&nbsp;<strong>Использовать устаревшие библиотеки android.support</strong>.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Щелкните&nbsp;<strong>Готово.</strong>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288819565" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;После создания проекта нужно добавить в&nbsp;файл build.gradle проекта зависимости для Google Play Services. В&nbsp;раздел «dependencies» нужно добавить последнюю версию библиотеки&nbsp;Google Play Services. В разрабываемой проекте используется версия 16.0.0.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816561" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">implementation 'com.google.android.gms:play-services-maps:16.0.0
+                  <br>implementation 'com.google.android.gms:play-services-location:16.0.0'</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816562" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Далее в проекте, откроем файл манифеста AndroidManifest.xml. Просто перед тегом&nbsp;&lt;/application&gt;&nbsp;необходимо объявить две декларации Мета-данных . Первый Мета-тег встраивает данные версии библиотеки Google Play Services, добавленной&nbsp;в приложение. Второй содержит наш API ключ, который мы ранее скопировали из консоли разработчика.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816563" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">&lt;meta-data
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;android:name="com.google.android.gms.version"
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;android:value="@integer/google_play_services_version" /&gt;
+                  <br>
+                  <br>&lt;meta-data
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;android:name="com.google.android.maps.v2.API_KEY"
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;android:value="AIzaSyB9oARLFPe4wRGyeuWJq0IqZ0g84TjmjVI" /&gt;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816564" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Также, в файле AndroidManifest.xml нужно указать разрешения для нашего приложения. Мы должны добавить следующие разрешения:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816565" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+                  <br>&lt;uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /&gt;
+                  <br>&lt;uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /&gt;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816566" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_COARSE_LOCATION" style="color: rgb(31, 91, 255);">android.permission.ACCESS_COARSE_LOCATION</a>&nbsp;позволяет использовать точки доступа Wi-Fi и/или мобильные данные, чтобы определять приблизительное местоположение устройства. API предоставляет информацию о местоположении с точностью примерно до городского квартала.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.android.com/reference/android/Manifest.permission.html#ACCESS_FINE_LOCATION" style="color: rgb(31, 91, 255);">android.permission.ACCESS_FINE_LOCATION</a>&nbsp;позволяет API максимально точно определять местоположение на основании информации, предоставляемой поставщиками данных о местоположении, включая глобальную систему позиционирования (GPS), сеть Wi-Fi и мобильные данные.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288820256" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Добавление карты на экран приложения</strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Теперь, когда библиотеки, API-ключи и разрешения настроены, пришло время добавить на экран приложения карту. Открываем файл макета — activity_main.xml , если вы не переименовали его во время создания проекта. Мы будем добавлять map view как фрагмент, а затем настроим его для загрузки содержимого на карту при старте приложения. Измените ваш макет следующим образом:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816567" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  <br>&nbsp;&nbsp;&nbsp;android:layout_width="fill_parent"
+                  <br>&nbsp;&nbsp;&nbsp;android:layout_height="fill_parent" &gt;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&lt;fragment
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:id="@+id/mapView"
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:name="com.google.android.gms.maps.MapFragment"
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_width="match_parent"
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;android:layout_height="match_parent"/&gt;
+                  <br>
+                  <br>&lt;/RelativeLayout&gt;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816568" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В методе&nbsp;onCreate()&nbsp;своего объекта activity установите файл макета как представление контента. Получите дескриптор для фрагмента карты путем вызова метода&nbsp;<a href="https://developer.android.com/reference/android/app/FragmentManager.html#findFragmentById(int)" style="color: rgb(31, 91, 255);">FragmentManager.findFragmentById()</a>. Затем используйте метод&nbsp;<a href="https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment#getMapAsync(com.google.android.gms.maps.OnMapReadyCallback)" style="color: rgb(31, 91, 255);">getMapAsync()</a>, чтобы зарегистрировать обратный вызов карты:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816569" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">&nbsp;@Override
+                  <br>protected void onCreate(Bundle savedInstanceState) {
+                  <br>&nbsp;&nbsp;super.onCreate(savedInstanceState);
+                  <br>&nbsp;&nbsp;// Retrieve the content view that renders the map.
+                  <br>&nbsp;&nbsp;setContentView(R.layout.activity_maps);
+                  <br>&nbsp;&nbsp;// Get the SupportMapFragment and request notification
+                  <br>&nbsp;&nbsp;// when the map is ready to be used.
+                  <br>&nbsp;&nbsp;SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.findFragmentById(R.id.map);
+                  <br>&nbsp;&nbsp;mapFragment.getMapAsync(this);
+                  <br>}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816570" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Реализуем интерфейс <a href="https://developers.google.com/android/reference/com/google/android/gms/maps/OnMapReadyCallback" style="color: rgb(31, 91, 255);">OnMapReadyCallback</a> и переопределим метод onMapReady(), чтобы настроить карту, когда объект GoogleMap будет доступен:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288821131" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">public class MapsMarkerActivity extends AppCompatActivity
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;implements OnMapReadyCallback {
+                  <br>
+                  <br>&nbsp;&nbsp;// ...
+                  <br>
+                  <br>&nbsp;&nbsp;@Override
+                  <br>&nbsp; &nbsp; public void onMapReady(GoogleMap googleMap) {
+                  <br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; }
+                  <br>}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816571" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Добавление маркера</strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Маркеры указывают местоположения на карте. По умолчанию используется стандартный значок, знакомый вам по работе с Google Картами. С помощью API можно изменить цвет значка, его изображение или точку привязки. Маркеры (объекты&nbsp;<a href="https://developers.google.com/android/reference/com/google/android/gms/maps/model/Marker" style="color: rgb(31, 91, 255);">Marker</a>) добавляются на карту с помощью метода&nbsp;GoogleMap.addMarker(markerOptions).
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Пример добавления маркера на карту. Маркер создается в точке с координатами&nbsp;-33.852,151.211&nbsp;(Сидней, Австралия), а при нажатии на него появляется строка "Marker in Sydney" в информационном окне.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816572" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">@Override
+                  <br>public void onMapReady(GoogleMap googleMap) {
+                  <br>&nbsp;&nbsp;// Add a marker in Sydney, Australia,
+                  <br>&nbsp;&nbsp;// and move the map's camera to the same location.
+                  <br>&nbsp;&nbsp;LatLng sydney = new LatLng(-33.852, 151.211);
+                  <br>&nbsp;&nbsp;googleMap.addMarker(new MarkerOptions()
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;.position(sydney)
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;.title("Marker in Sydney"));
+                  <br>&nbsp;&nbsp;googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+                  <br>}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816573" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Маркеры поддерживают настройку с использованием следующих свойств:
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Position (Положение; обязательно).&nbsp;</strong>Значение параметра <a href="https://developers.google.com/maps/documentation/android-sdk/reference/com/google/android/libraries/maps/model/LatLng" style="color: rgb(31, 91, 255);">LatLng</a> для положения маркера на карте. Это единственное обязательное свойство объекта Marker.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Anchor (Привязка).&nbsp;</strong>Точка на изображении, которое будет размещено в месте, указанном параметром маркера LatLng (широта и долгота). По умолчанию устанавливается по центру в нижней части изображения.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Alpha (Альфа-канал).&nbsp;</strong>Свойство, определяющее прозрачность маркера. По умолчанию – 1.0.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Title (Заголовок).&nbsp;</strong>Строка, которая отображается в информационном окне, когда пользователь касается маркера.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Snippet (Фрагмент).&nbsp;</strong>Дополнительный текст, отображаемый под названием.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Icon (Значок).&nbsp;</strong>Картинка в битовом формате, которая отображается вместо значка по умолчанию.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Draggable (Перетаскиваемость).&nbsp;</strong>Задайте значение true, если хотите, чтобы пользователи могли перетаскивать значок. Значение по умолчанию – false.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Visible (Видимость).&nbsp;</strong>Измените значение этого свойства на false, чтобы сделать маркер невидимым. Значение по умолчанию – true.
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Flat или Billboard (свойства ориентации).&nbsp;</strong>По умолчанию ориентация маркеров рассчитывается относительно экрана. Они не вращаются и не наклоняются при изменении ракурса. Плоские маркеры ориентированы по земной поверхности и вращаются или наклоняются вместе с камерой. Маркеры обоих типов не меняют размер при масштабировании. Если вам необходим этот эффект, используйте наложения (GroundOverlay).
+              <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• <strong>Rotation (Вращение).&nbsp;</strong>Поворот маркера по часовой стрелке в градусах. Для плоских маркеров направление по умолчанию может изменяться. По умолчанию плоский маркер направлен на север. Остальные маркеры по умолчанию расположены перпендикулярно земной поверхности и при вращении обращены в сторону камеры.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288821955" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Получение местоположения с помощью LocationServices API</strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Внутри MainActivity поместите следующее, чтобы подключиться и начать получать обновления местоположения:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816574" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style=""><strong>private</strong> LocationRequest mLocationRequest<strong>;</strong>
+                  <br>
+                  <br><strong>private</strong> <strong>long</strong> UPDATE_INTERVAL <strong>=</strong> 10 <strong>*</strong> 1000<strong>;</strong>&nbsp;<em>/* 10 secs */</em>
+                  <br><strong>private</strong> <strong>long</strong> FASTEST_INTERVAL <strong>=</strong> 2000<strong>;</strong> <em>/* 2 sec */</em>
+                  <br>
+                  <br><strong>public</strong> <strong>void</strong> <strong>onCreate(</strong>Bundle savedInstanceState<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;<strong>super.</strong>onCreate<strong>(</strong>savedInstanceState<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;setContentView<strong>(</strong>R<strong>.</strong>layout<strong>.</strong>activity_main<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;startLocationUpdates<strong>();</strong>
+                  <br><strong>}</strong>
+                  <br>
+                  <br><em>// Trigger new location updates at interval</em>
+                  <br><strong>protected</strong> <strong>void</strong> <strong>startLocationUpdates()</strong> <strong>{</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// Create the location request to start receiving updates</em>
+                  <br>&nbsp;&nbsp;&nbsp;mLocationRequest <strong>=</strong> <strong>new</strong> LocationRequest<strong>();</strong>
+                  <br>&nbsp;&nbsp;&nbsp;mLocationRequest<strong>.</strong>setPriority<strong>(</strong>LocationRequest<strong>.</strong>PRIORITY_HIGH_ACCURACY<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;mLocationRequest<strong>.</strong>setInterval<strong>(</strong>UPDATE_INTERVAL<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;mLocationRequest<strong>.</strong>setFastestInterval<strong>(</strong>FASTEST_INTERVAL<strong>);</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// Create LocationSettingsRequest object using location request</em>
+                  <br>&nbsp;&nbsp;&nbsp;LocationSettingsRequest<strong>.</strong>Builder builder <strong>=</strong> <strong>new</strong> LocationSettingsRequest<strong>.</strong>Builder<strong>();</strong>
+                  <br>&nbsp;&nbsp;&nbsp;builder<strong>.</strong>addLocationRequest<strong>(</strong>mLocationRequest<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;LocationSettingsRequest locationSettingsRequest <strong>=</strong> builder<strong>.</strong>build<strong>();</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// Check whether location settings are satisfied</em>
+                  <br>&nbsp;&nbsp;&nbsp;SettingsClient settingsClient <strong>=</strong> LocationServices<strong>.</strong>getSettingsClient<strong>(this);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;settingsClient<strong>.</strong>checkLocationSettings<strong>(</strong>locationSettingsRequest<strong>);</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// new Google API SDK v11 uses getFusedLocationProviderClient(this)</em>
+                  <br>&nbsp;&nbsp;&nbsp;getFusedLocationProviderClient<strong>(this).</strong>requestLocationUpdates<strong>(</strong>mLocationRequest<strong>,</strong> <strong>new</strong> LocationCallback<strong>()</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>public</strong> <strong>void</strong> <strong>onLocationResult(</strong>LocationResult locationResult<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>// do work here</em>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onLocationChanged<strong>(</strong>locationResult<strong>.</strong>getLastLocation<strong>());</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>}</strong>
+                  <br>&nbsp;&nbsp;&nbsp;<strong>},</strong>
+                  <br>&nbsp;&nbsp;&nbsp;Looper<strong>.</strong>myLooper<strong>());</strong>
+                  <br><strong>}</strong>
+                  <br>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816576" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Затем зарегистрируйтесь для получения обновлений местоположения с помощью&nbsp;onLocationChanged:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816578" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style=""><strong>public</strong> <strong>void</strong> <strong>onLocationChanged(</strong>Location location<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// New location has now been determined</em>
+                  <br>&nbsp;&nbsp;&nbsp;String msg <strong>=</strong> "Updated Location: " <strong>+</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double<strong>.</strong>toString<strong>(</strong>location<strong>.</strong>getLatitude<strong>())</strong> <strong>+</strong> "," <strong>+</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double<strong>.</strong>toString<strong>(</strong>location<strong>.</strong>getLongitude<strong>());</strong>
+                  <br>&nbsp;&nbsp;&nbsp;Toast<strong>.</strong>makeText<strong>(this,</strong> msg<strong>,</strong> Toast<strong>.</strong>LENGTH_SHORT<strong>).</strong>show<strong>();</strong>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// You can now create a LatLng Object for use with maps</em>
+                  <br>&nbsp;&nbsp;&nbsp;LatLng latLng <strong>=</strong> <strong>new</strong> LatLng<strong>(</strong>location<strong>.</strong>getLatitude<strong>(),</strong> location<strong>.</strong>getLongitude<strong>());</strong>
+                  <br><strong>}</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816579" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Если вам нужно последнее известное местоположение, вы можете реализовать эту функцию:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816582" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style=""><strong>public</strong> <strong>void</strong> <strong>getLastLocation()</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;<em>// Get last known recent location using new Google Play Services SDK (v11+)</em>
+                  <br>&nbsp;&nbsp;&nbsp;FusedLocationProviderClient locationClient <strong>=</strong> getFusedLocationProviderClient<strong>(this);</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;locationClient<strong>.</strong>getLastLocation<strong>()</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>.</strong>addOnSuccessListener<strong>(new</strong> OnSuccessListener<strong>&lt;</strong>Location<strong>&gt;()</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>public</strong> <strong>void</strong> <strong>onSuccess(</strong>Location location<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>// GPS location can be null if GPS is switched off</em>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> <strong>(</strong>location <strong>!=</strong> <strong>null)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onLocationChanged<strong>(</strong>location<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>}</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>}</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>})</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>.</strong>addOnFailureListener<strong>(new</strong> OnFailureListener<strong>()</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>public</strong> <strong>void</strong> <strong>onFailure(</strong>@NonNull Exception e<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log<strong>.</strong>d<strong>(</strong>"MapDemoActivity"<strong>,</strong> "Error trying to get last GPS location"<strong>);</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e<strong>.</strong>printStackTrace<strong>();</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>}</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>});</strong>
+                  <br><strong>}</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288816583" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Чтобы позволить Google Maps отображать значок, который приведет вас к местоположению GPS, вам необходимо сначала запросить ACCESS_FINE_LOCATION разрешение и вызвать setMyLocationEnabled:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288823037" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">@Override
+                  <br><strong>public</strong> <strong>void</strong> <strong>onMapReady(</strong>GoogleMap googleMap<strong>)</strong> <strong>{</strong>
+                  <br>
+                  <br>&nbsp;&nbsp;<strong>if(</strong>checkPermissions<strong>())</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;googleMap<strong>.</strong>setMyLocationEnabled<strong>(true);</strong>
+                  <br>&nbsp;&nbsp;<strong>}</strong>
+                  <br><strong>}</strong>
+                  <br>
+                  <br><strong>private</strong> <strong>boolean</strong> <strong>checkPermissions()</strong> <strong>{</strong>
+                  <br>&nbsp;<strong>if</strong> <strong>(</strong>ContextCompat<strong>.</strong>checkSelfPermission<strong>(this,</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;Manifest<strong>.</strong>permission<strong>.</strong>ACCESS_FINE_LOCATION<strong>)</strong> <strong>==</strong> PackageManager<strong>.</strong>PERMISSION_GRANTED<strong>)</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> <strong>true;</strong>
+                  <br>&nbsp;<strong>}</strong> <strong>else</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;requestPermissions<strong>();</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> <strong>false;</strong>
+                  <br>&nbsp;<strong>}</strong>
+                  <br><strong>}</strong>
+                  <br>
+                  <br><strong>private</strong> <strong>void</strong> <strong>requestPermissions()</strong> <strong>{</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActivityCompat<strong>.</strong>requestPermissions<strong>(this,</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>new</strong> String<strong>[]{</strong>Manifest<strong>.</strong>permission<strong>.</strong>ACCESS_FINE_LOCATION<strong>},</strong>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REQUEST_FINE_LOCATION<strong>);</strong>
+                  <br><strong>}</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288823191" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Построение маршрута по двум точкам</strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Для построения маршрута создадим файл DirectionsJSONParser.java, который анализирует местоположения и возвращает маршрут.&nbsp;Затем вызывается метод для получения данных ломаной линии, которые затем отображаются на карте.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288823522" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">package com.example.mapdemo;
+                  <br>
+                  <br>import android.util.Log;
+                  <br>
+                  <br>import com.google.android.gms.maps.model.LatLng;
+                  <br>
+                  <br>import org.json.JSONArray;
+                  <br>import org.json.JSONException;
+                  <br>import org.json.JSONObject;
+                  <br>
+                  <br>import java.util.ArrayList;
+                  <br>import java.util.HashMap;
+                  <br>import java.util.List;
+                  <br>
+                  <br>
+                  <br>
+                  <br>public class DirectionsJSONParser {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;/** Receives a JSONObject and returns a list of lists containing latitude and longitude */
+                  <br>&nbsp;&nbsp;&nbsp;public List&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt; parse(JSONObject jObject){
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt; routes = new ArrayList&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt;() ;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jRoutes = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jLegs = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jSteps = null;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jRoutes = jObject.getJSONArray("routes");
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/** Traversing all routes */
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0;i&lt;jRoutes.length();i++){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jLegs = ( (JSONObject)jRoutes.get(i)).getJSONArray("legs");
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List path = new ArrayList&lt;HashMap&lt;String, String&gt;&gt;();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/** Traversing all legs */
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j=0;j&lt;jLegs.length();j++){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jSteps = ( (JSONObject)jLegs.get(j)).getJSONArray("steps");
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/** Traversing all steps */
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int k=0;k&lt;jSteps.length();k++){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String polyline = "";
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;polyline = (String)((JSONObject)((JSONObject)jSteps.get(k)).get("polyline")).get("points");
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List list = decodePoly(polyline);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/** Traversing all points */
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int l=0;l &lt;list.size();l++){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HashMap&lt;String, String&gt; hm = new HashMap&lt;String, String&gt;();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hm.put("lat", Double.toString(((LatLng)list.get(l)).latitude) );
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hm.put("lng", Double.toString(((LatLng)list.get(l)).longitude) );
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path.add(hm);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routes.add(path);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (JSONException e) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch (Exception e){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return routes;
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;public List&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt; parsingWay(JSONObject jObject){
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt; routes = new ArrayList&lt;List&lt;HashMap&lt;String, String&gt;&gt;&gt;();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jRoutes = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jLegs = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONArray jSteps = null;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jRoutes = jObject.getJSONArray("routes");
+                  <br>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (JSONException e) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch (Exception e){
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return routes;
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private List decodePoly(String encoded) {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List poly = new ArrayList();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int index = 0, len = encoded.length();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int lat = 0, lng = 0;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while (index &lt; len) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int b, shift = 0, result = 0;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = encoded.charAt(index++) - 63;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result |= (b &amp; 0x1f) &lt;&lt; shift;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shift += 5;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} while (b &gt;= 0x20);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int dlat = ((result &amp; 1) != 0 ? ~(result &gt;&gt; 1) : (result &gt;&gt; 1));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lat += dlat;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shift = 0;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = 0;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = encoded.charAt(index++) - 63;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result |= (b &amp; 0x1f) &lt;&lt; shift;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shift += 5;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} while (b &gt;= 0x20);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int dlng = ((result &amp; 1) != 0 ? ~(result &gt;&gt; 1) : (result &gt;&gt; 1));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lng += dlng;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LatLng p = new LatLng((((double) lat / 1E5)),
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(((double) lng / 1E5)));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;poly.add(p);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return poly;
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288823688" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">
+              <p style="text-align: center;"><strong style="font-size: 24px;">Отрисовка маршрута</strong><strong> </strong></p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В файле MainActivity.java:</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288823818" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_showed r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="248">
+      <!-- T220 -->
+      <div class="t220">
+        <div class="t-container ">
+          <div class="t-col t-col_8 t-prefix_2">
+            <div class="t220__textwrapper" style="background-color:#f5f6ff;">
+              <div style="">
+                <div field="text" class="t220__text t-text t-text_md " style="">public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private GoogleMap mMap;
+                  <br>&nbsp;&nbsp;&nbsp;ArrayList markerPoints= new ArrayList();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;protected void onCreate(Bundle savedInstanceState) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(savedInstanceState);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity_maps);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Obtain the SupportMapFragment and get notified when the map is ready to be used.
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.findFragmentById(R.id.map);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mapFragment.getMapAsync(this);
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;public void onMapReady(GoogleMap googleMap) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap = googleMap;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LatLng sydney = new LatLng(-34, 151);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 16));
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void onMapClick(LatLng latLng) {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (markerPoints.size() &gt; 1) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;markerPoints.clear();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap.clear();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Adding new item to the ArrayList
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;markerPoints.add(latLng);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Creating MarkerOptions
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MarkerOptions options = new MarkerOptions();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Setting the position of the marker
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;options.position(latLng);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (markerPoints.size() == 1) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;options.icon(BitmapDescriptorFactory.defaultMarker(
+                  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BitmapDescriptorFactory.HUE_GREEN));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else if (markerPoints.size() == 2) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;options.icon(BitmapDescriptorFactory.defaultMarker(
+                  <br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;BitmapDescriptorFactory.HUE_RED));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Add new marker to the Google Map Android API V2
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap.addMarker(options);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Checks, whether start and end locations are captured
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (markerPoints.size() &gt;= 2) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LatLng origin = (LatLng) markerPoints.get(0);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LatLng dest = (LatLng) markerPoints.get(1);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Getting URL to the Google Directions API
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String url = getDirectionsUrl(origin, dest);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DownloadTask downloadTask = new DownloadTask();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Start downloading json data from Google Directions API
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;downloadTask.execute(url);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private class DownloadTask extends AsyncTask {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected String doInBackground(String... url) {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String data = "";
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data = downloadUrl(url[0]);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (Exception e) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log.d("Background Task", e.toString());
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return data;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected void onPostExecute(String result) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.onPostExecute(result);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ParserTask parserTask = new ParserTask();
+                  <br>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parserTask.execute(result);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private class ParserTask extends AsyncTask&lt;String, Integer, List&lt;List&lt;HashMap&gt;&gt;&gt; {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Parsing the data in non-ui thread
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected List&lt;List&lt;HashMap&gt;&gt; doInBackground(String... jsonData) {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JSONObject jObject;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;List&lt;HashMap&gt;&gt; routes = null;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jObject = new JSONObject(jsonData[0]);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DirectionsJSONParser parser = new DirectionsJSONParser();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;routes = parser.parse(jObject);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (Exception e) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return routes;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protected void onPostExecute(List&lt;List&lt;HashMap&gt;&gt; result) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ArrayList points = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PolylineOptions lineOptions = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MarkerOptions markerOptions = new MarkerOptions();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i &lt; result.size(); i++) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points = new ArrayList();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOptions = new PolylineOptions();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;HashMap&gt; path = result.get(i);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int j = 0; j &lt; path.size(); j++) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HashMap point = path.get(j);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double lat = Double.parseDouble(point.get("lat"));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double lng = Double.parseDouble(point.get("lng"));
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LatLng position = new LatLng(lat, lng);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;points.add(position);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOptions.addAll(points);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOptions.width(12);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOptions.color(Color.RED);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineOptions.geodesic(true);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>// Drawing polyline in the Google Map for the i-th route
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mMap.addPolyline(lineOptions);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private String getDirectionsUrl(LatLng origin, LatLng dest) {
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Origin of route
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Destination of route
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Sensor enabled
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String sensor = "sensor=false";
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String mode = "mode=driving";
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Building the parameters to the web service
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String parameters = str_origin + "&amp;" + str_dest + "&amp;" + sensor + "&amp;" + mode;
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Output format
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String output = "json";
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Building the url to the web service
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters;
+                  <br>
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return url;
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;private String downloadUrl(String strUrl) throws IOException {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String data = "";
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InputStream iStream = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HttpURLConnection urlConnection = null;
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;URL url = new URL(strUrl);
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;urlConnection = (HttpURLConnection) url.openConnection();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;urlConnection.connect();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iStream = urlConnection.getInputStream();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BufferedReader br = new BufferedReader(new InputStreamReader(iStream));
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StringBuffer sb = new StringBuffer();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String line = "";
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while ((line = br.readLine()) != null) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sb.append(line);
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data = sb.toString();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br.close();
+                  <br>
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} catch (Exception e) {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Log.d("Exception", e.toString());
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} finally {
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iStream.close();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;urlConnection.disconnect();
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+                  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return data;
+                  <br>&nbsp;&nbsp;&nbsp;}
+                  <br>}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rec288824687" class="r t-rec t-rec_pt_0 t-rec_pb_0 r_hidden r_anim" style="padding-top:0px;padding-bottom:0px; " data-record-type="106">
+      <!-- T004 -->
+      <div class="t004">
+        <div class="t-container ">
+          <div class="t-col t-col_10 t-prefix_1">
+            <div field="text" class="t-text t-text_md " style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Мы вызвали onMapClickListener объект карты Google. Он используется для установки маркера в выбранном месте и сохранения этого места в ArrayList. ArrayList используется только для хранения маркеров источника и назначения.
+
+            </div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
